@@ -9,12 +9,13 @@ import Tile2 from "./components/tile2";
 import { solutions } from "@/data/solutions";
 import Featuere from "./components/feature";
 import { AnimatedTooltipPreview } from "./components/avetars";
+import { WorldMapDemo } from "./components/worldmap";
 
 export default function Home() {
   return (
     <div className="w-full h-auto">
       <div className=" w-full flex flex-col items-center px-4  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-b border-dashed border-stone-400 ">
-        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100 pt-32 border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 pb-8 bg-red-100">
+        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100 pt-32 border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 pb-8 ">
           <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl 2xl:max-w-[70vw] rounded-2xl bg-white  px-4 sm:px-8 lg:px-12 py-8 gap-8 border ">
             {/* Text Content */}
             <div className="w-full lg:w-1/2 flex flex-col gap-4 items-center lg:items-start text-center lg:text-left">
@@ -64,7 +65,7 @@ export default function Home() {
         </div>
       </div>
       <div className=" w-full flex items-center justify-center bg-gradient-to-r from-stone-100 via-white to-stone-100 border-b border-dashed border-stone-400">
-        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 bg-red-100">
+        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 ">
           <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl 2xl:max-w-[70vw] rounded-2xl  px-4   py-8 lg:gap-8  ">
             <div className="w-full lg:pl-8 py-4 border-0 lg:border-l-1">
               <Topic
@@ -98,10 +99,42 @@ export default function Home() {
         </div>
       </div>
       <div className=" w-full flex items-center justify-center bg-gradient-to-r from-stone-100 via-white to-stone-100 border-b border-dashed border-stone-400">
-        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 bg-red-100">
-          <div className=" px-4 max-w-7xl 2xl:max-w-[70vw] w-full ">
+        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 ">
+          <div className=" px-4 max-w-7xl 2xl:max-w-[70vw] w-full py-12 ">
             <Featuere />
           </div>
+       
+          <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-7xl 2xl:max-w-[70vw] rounded-2xl  px-4   py-8 lg:gap-8  ">
+            <div className="w-full lg:pl-8 py-4 border-0 lg:border-l-1">
+              <Topic
+                mainTopic="What we will solve"
+                subTopic="Bringing Innovative IT Solutions and Ideas to Your Business."
+              />
+            </div>
+            <div className="w-full lg:px-8 py-4  border-0 lg:border-l-1">
+              <Description
+                maindescription={
+                  "At µron labs, we offer cost-effective and scalable IT solutions that are tailored to your specific business needs. Our team of experts understands the importance of being agile and innovative, especially for startups, and we are committed to bringing the latest IT solutions and ideas to your business. We work closely with you to understand your unique challenges and develop innovative solutions that help you achieve your goals."
+                }
+              />
+            </div>
+          </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 px-4 max-w-7xl 2xl:max-w-[70vw]">
+        {solutions.map((service, index) => (
+          <Tile2
+            key={index}
+            Icon={service.Icon}
+            title={service.title}
+            description={service.description}
+            variant={service.variant}
+          />
+        ))}
+      </div>
+        </div>
+      </div>
+      <div className=" w-full flex items-center justify-center bg-gradient-to-r from-stone-100 via-white to-stone-100 border-b border-dashed border-stone-400">
+        <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 ">
+          <WorldMapDemo/>
         </div>
       </div>
     </div>
