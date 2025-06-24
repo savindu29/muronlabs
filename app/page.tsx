@@ -10,6 +10,7 @@ import { solutions } from "@/data/solutions";
 import Featuere from "./components/feature";
 import { AnimatedTooltipPreview } from "./components/avetars";
 import { WorldMapDemo } from "./components/worldmap";
+import NewSection from "./components/new-hero";
 
 export default function Home() {
   return (
@@ -134,9 +135,12 @@ export default function Home() {
       </div>
       <div className=" w-full flex items-center justify-center bg-gradient-to-r from-stone-100 via-white to-stone-100 border-b border-dashed border-stone-400">
         <div className="w-[93vw] md:w-[90vw]  bg-gradient-to-r from-stone-100 via-white to-stone-100  border-x border-dashed border-stone-400 flex flex-col items-center justify-center px-4 py-8 ">
-          <WorldMapDemo/>
-        </div>
+          <div className=" px-4 max-w-7xl 2xl:max-w-[70vw] w-full py-12 ">
+            <NewSection />
+          </div>
+          </div>
       </div>
+      
     </div>
   );
 }
