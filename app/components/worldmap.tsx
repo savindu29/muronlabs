@@ -6,7 +6,7 @@ export function WorldMapDemo() {
   return (
     <div className=" max-w-7xl w-full">
       <div className="max-w-7xl mx-auto text-center h-full">
-        <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
+        <p className="font-bold text-4xl  text-indigo-600">
           Work with globally
         
            

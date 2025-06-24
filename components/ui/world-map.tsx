@@ -25,7 +25,7 @@ export default function WorldMap({
     radius: 0.22,
     color: "#00000040",
     shape: "circle",
-    backgroundColor:  "stone-100",
+    backgroundColor:  "indigo-100",
   });
 
   const projectPoint = (lat: number, lng: number) => {
@@ -44,10 +44,10 @@ export default function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] dark:bg-black bg-stone-100 rounded-lg  relative font-sans">
+    <div className="w-full aspect-[2/1] dark:bg-black bg-transparent rounded-lg  relative font-sans">
       <img
         src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
+        className="h-full w-full  pointer-events-none select-none"
         alt="world map"
         height="495"
         width="1056"

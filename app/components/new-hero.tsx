@@ -22,21 +22,21 @@ export default function NewSection() {
 
   return (
     <div
-      className="w-full relative min-h-[70vh] md:min-h-[50vh] flex"
+      className="w-full  min-h-[70vh] md:min-h-[50vh] flex flex-col lg:flex-row "
       ref={containerRef}
       onMouseMove={handleMouseMove}
     >
-      <div className="relative z-20 ml-8 flex flex-col gap-2  w-full">
+      <div className=" md:ml-8 flex  gap-2  w-full flex-col text-center md:text-left">
         <div className="font-medium text-3xl md:text-4xl">Your</div>
-        <div className="text-7xl font-bold text-red-500">VISION</div>
+        <div className="text-4xl lg:text-7xl font-bold text-red-500">VISION</div>
 
-          <div className="font-semibold text-7xl text-black">Your Mission</div>
-          <div className="text-4xl text-stone-500">We’ll help you achieve it</div>
+          <div className="font-semibold text-4xl  lg:text-7xl text-black">Your Mission</div>
+          <div className="text-3xl text-stone-500">We’ll help you achieve it</div>
         
         
      
       </div>
-      <div className="w-full">
+      <div className="w-full mt-8 md:mt-0">
         <WorldMapDemo/>
       </div>
     </div>
