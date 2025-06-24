@@ -98,15 +98,15 @@ export default function Footer() {
               Contact Us
             </h4>
             <ul className="space-y-3 ">
-              <li className="flex items-center space-x-3 text-stone-600 hover:text-indigo-600">
+              <li className="flex items-center space-x-3 text-stone-700 hover:text-indigo-600">
                 <PhoneIcon className="w-5 h-5" />
                 <span>+1 (555) 123-4567</span>
               </li>
-              <li className="flex items-center space-x-3 text-stone-600 hover:text-indigo-600">
+              <li className="flex items-center space-x-3 text-stone-700 hover:text-indigo-600">
                 <EnvelopeIcon className="w-5 h-5" />
                 <span>info@muronlab.com</span>
               </li>
-              <li className="flex items-center space-x-3 text-stone-600 hover:text-indigo-600">
+              <li className="flex items-center space-x-3 text-stone-700 hover:text-indigo-600">
                 <MapPinIcon className="w-5 h-5" />
                 <span>123 Legal Street, Justice City</span>
               </li>
